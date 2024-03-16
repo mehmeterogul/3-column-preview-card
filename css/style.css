@@ -167,3 +167,9 @@ body {
     border-bottom-right-radius: 0.625rem;
   }
 }
+
+h1 {
+  color: transparent;
+  position: absolute;
+  top: 0;
+}
