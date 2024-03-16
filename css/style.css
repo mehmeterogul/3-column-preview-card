@@ -1,0 +1,169 @@
+:root {
+  --color-orange: hsl(31, 77%, 52%);
+  --color-cyan: hsl(184, 100%, 22%);
+  --color-cyan-dark: hsl(179, 100%, 13%);
+
+  --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --color-light-gray: hsl(0, 0%, 95%);
+
+  --ff-main: "Lexend Deca", sans-serif;
+  --ff-secondary: "Big Shoulders Display", sans-serif;
+
+  --fs-heading: 2.5rem;
+  --fs-body-m: 0.938rem;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-light-gray);
+  color: var(--color-transparent-white);
+  font-family: var(--ff-main);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-body-m);
+  font-style: normal;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5.5rem 1.5rem;
+}
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-box {
+  padding: 3rem;
+}
+
+.card-box:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-box:last-of-type {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.card-box__icon {
+  margin-bottom: 2.25rem;
+}
+
+.card-box__heading {
+  text-transform: uppercase;
+  font-family: var(--ff-secondary);
+  color: var(--color-light-gray);
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-bold);
+}
+
+.card-box__text {
+  padding: 1.625rem 0 1.5rem 0;
+  line-height: 1.7;
+}
+
+.card-box__link {
+  width: 9.25rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light-gray);
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  transition: var(--transition);
+}
+
+.orange .card-box__link {
+  color: var(--color-orange);
+}
+
+.cyan .card-box__link {
+  color: var(--color-cyan);
+}
+
+.cyan-dark .card-box__link {
+  color: var(--color-cyan-dark);
+}
+
+.card-box__link:hover {
+  background-color: transparent;
+  color: var(--color-light-gray);
+  border: 2px solid var(--color-light-gray);
+}
+
+.orange.card-box {
+  background-color: var(--color-orange);
+}
+
+.cyan.card-box {
+  background-color: var(--color-cyan);
+}
+
+.cyan-dark.card-box {
+  background-color: var(--color-cyan-dark);
+}
+
+@media only screen and (min-width: 48rem) {
+  body {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .preview-card {
+    max-width: 57.5rem;
+    min-height: 31.25rem;
+    flex-direction: row;
+  }
+
+  .card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 33.33%;
+  }
+
+  .card-box:first-of-type {
+    border-radius: 0;
+  }
+
+  .card-box:last-of-type {
+    border-radius: 0;
+  }
+
+  .card-box__link {
+    margin-top: auto;
+  }
+}
+
+@media only screen and (min-width: 57.5rem) {
+  body {
+    justify-content: center;
+    padding: 2.5rem 0 0 0;
+  }
+
+  .card-box:first-of-type {
+    border-bottom-left-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+  }
+
+  .card-box:last-of-type {
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+  }
+}
